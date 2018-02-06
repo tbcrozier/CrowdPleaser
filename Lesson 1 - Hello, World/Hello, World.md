@@ -19,7 +19,9 @@ if __name__ == "__main__":
 
 First let's get this running, and then we'll look at some of the concepts!
 
-Copy the code above into a text editor and save to a file called "hello.py" on your desktop [TODO: Issue #3](https://github.com/tbcrozier/Ravenwood_My1stCode/issues/3).
+Copy the code above into a text editor and save to a file called "hello.py" on your desktop
+
+[TODO: Issue #3 -- better instructions here](https://github.com/tbcrozier/Ravenwood_My1stCode/issues/3).
 
 Now in your terminal, you can run this command:
 ```
@@ -31,3 +33,5 @@ You should see output similar to this:
 ![http://127.0.0.1:5000/](https://github.com/tbcrozier/Ravenwood_My1stCode/blob/master/wiki_images/hello_world_output_osx.gif?raw=true)
 
 And there you have it! Your first "Hello, World" program!
+
+[TODO: Issue #4 -- explain concepts here](https://github.com/tbcrozier/Ravenwood_My1stCode/issues/4).
