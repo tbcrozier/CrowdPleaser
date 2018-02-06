@@ -12,7 +12,7 @@ For Macs, you'll need to install XCode, HomeBrew and then Python3. You'll do all
 
 To open a terminal, press Command-Space to open Spotlight Search, then type `terminal` and hit Enter.
 
-![Opening Terminal on OSX](https://github.com/tbcrozier/Ravenwood_My1stCode/wiki_files/open_terminal_osx.gif)
+![Opening Terminal on OSX](https://github.com/tbcrozier/Ravenwood_My1stCode/blob/master/wiki_images/open_terminal_osx.gif?raw=true)
 
 #### XCode
 Once you're in the terminal, type `xcode-select --install` and hit Enter.
