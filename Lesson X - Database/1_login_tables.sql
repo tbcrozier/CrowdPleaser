@@ -6,8 +6,8 @@ CREATE TABLE Person (
     middle_name TEXT NULL,
     last_name TEXT NOT NULL,
     student_id INTEGER NULL,
-    login_id INTEGER NULL,
-    FOREIGN KEY(login_id) REFERENCES UserLogin(id)
+    user_login_id INTEGER NULL,
+    FOREIGN KEY(user_login_id) REFERENCES UserLogin(id)
 );
 
 CREATE TABLE UserLogin (
