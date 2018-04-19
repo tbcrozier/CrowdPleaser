@@ -1,48 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  </head>
-    <body>
-      <img src="https://www.wcs.edu/rhs/wp-content/uploads/sites/81/2015/08/rhs-webheaderv3.png">
-    <br>
- <div>
-<!-- NEW -->   
- 
- <form action = "{{ url_for('addrec') }}" method = "POST">
-         <h3>Student Information</h3>
-         ID<br>
-         <input type = "text" name = "id" /></br>
-         
-         EMAIL<br>
-         <textarea name = "email" ></textarea><br>
-         
-         FIRST NAME<br>
-         <input type = "text" name = "first_name" /><br>
-         
-         MIDDLE NAME<br>
-         <input type = "text" name = "middle_name" /><br>
 
-         LAST NAME<br>
-         <input type = "text" name = "last_name" /><br>
-         
-         STUDENT ID<br>
-         <input type = "text" name = "student_id" /><br>
-         
-         USER LOGIN ID<br>
-         <input type = "text" name = "user_login_id" /><br>
-
-         <input type = "submit" value = "submit" /><br>
-  </form>
-
-   
-      
-<!-- NEW -->         
-  <form method="get" action="list">
-        <button type="submit">List</button>
-    </form>
-<!-- NEW -->  
-
-  </div>
-  </body>
+   <head>
+    <link rel="stylesheet" href= "{{ url_for('static',filename='styles/style.css') }}">
     
+   </head>
+   
+   <body>
+   		<h1>Hello, sign up with a username and password. This works!</h1>
+     	 <form method="get" action="enternew">
+   		 	<button type="submit">Continue</button>
+  		</form>
+
+  		<form method="get" action="list">
+     		 	<button type="submit">List</button>
+  		</form>
+
+      <form method="get" action="/">
+          <button type="submit">login</button>
+      </form>
+
+      <form method="get" action="/">
+          <button type="submit">logout</button>
+      </form>
+
+   </body>
+   
 </html>
+

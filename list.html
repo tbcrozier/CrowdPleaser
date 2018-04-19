@@ -4,24 +4,18 @@
    
       <table border = 1>
          <thead>
-            <td>ID</td>
-            <td>EMAIL</td>
-            <td>FIRST NAME</td>
-            <td>MIDDLE NAME</td>
-            <td>LAST NAME</td>
-            <td>STUDENT ID</td>
-            <td>USER LOGIN ID</td>
+            <td>Name</td>
+            <td>Address>/td<
+            <td>city</td>
+            <td>Pincode</td>
          </thead>
          
          {% for row in rows %}
             <tr>
-               <td>{{row['id']}}</td>
-               <td>{{row["email"]}}</td>
-               <td>{{row["first_name"]}}</td>
-               <td>{{row["middle_name"]}}</td>	
-               <td>{{row["last_name"]}}</td>
-               <td>{{row["student_id"]}}</td>
-               <td>{{row["user_login_id"]}}</td>
+               <td>{{row["name"]}}</td>
+               <td>{{row["addr"]}}</td>
+               <td> {{ row["city"]}}</td>
+               <td>{{row['pin']}}</td>	
             </tr>
          {% endfor %}
       </table>
@@ -30,4 +24,3 @@
       
    </body>
 </html>
-
