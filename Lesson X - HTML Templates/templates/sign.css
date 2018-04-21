@@ -1,0 +1,43 @@
+img {
+ position: absolute;
+  left: 418px;
+  top: 0px;
+  
+  
+  }
+
+div{
+  position: absolute;
+  top: 200px;
+  left: 545px;
+
+  
+  
+}
+
+body{
+  background-image: url(https://news-img-9a9cfd28311db221b19757424a2f3b66.s3.amazonaws.com/articles/looney-mug.jpg);
+width:500px;  
+  
+}
+
+input {
+
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px grey;
+}
+
+//body{
+  background-color:  grey
+  
+  
+}
+
+
+label {
+  display: block;
+  margin-top: 20px;
+  font-family: 'Crete Round', serif;
+}
+
+
