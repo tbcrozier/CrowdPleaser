@@ -6,11 +6,18 @@ app = Flask(__name__)
 
 
 def hash_password(password, salt):
-    hashed_password = hashlib.sha512(password + salt).hexdigest()
+    """
+    Take a password and a salt, and return a hashed password
+    """
+    password_string = (password + salt).encode('utf-8')
+    hashed_password = hashlib.sha512(password_string).hexdigest()
     return hashed_password
 
 
 def get_auth_for_user(user_id):
+    """
+    Take a user_id, and return what we know about that user
+    """
     db_cursor.execute("SELECT * FROM user WHERE id=" + user_id)
     result = db_cursor.fetchone()
     return result
@@ -21,8 +28,9 @@ db_cursor = db_connection.cursor()
 db_cursor.execute("DROP TABLE IF EXISTS user;")
 db_cursor.execute("CREATE TABLE user(id TEXT, salt TEXT, password TEXT);")
 db_cursor.execute("INSERT INTO user VALUES('123', '{salt}', '{hash}');".format(salt='234qwlkjs', hash=hash_password('password', '234qwlkjs')))
-db_cursor.execute("INSERT INTO user VALUES('234', '{salt}', '{hash}');".format(salt='lkjou234s', hash=hash_password('password', '234qwlkjs')))
-db_cursor.execute("INSERT INTO user VALUES('345', '{salt}', '{hash}');".format(salt='903dlouls', hash=hash_password('password', '234qwlkjs')))
+db_cursor.execute("INSERT INTO user VALUES('234', '{salt}', '{hash}');".format(salt='lkjou234s', hash=hash_password('password', 'lkjou234s')))
+db_cursor.execute("INSERT INTO user VALUES('345', '{salt}', '{hash}');".format(salt='903dlouls', hash=hash_password('password', '903dlouls')))
+db_connection.commit()
 
 
 @app.route("/", methods=['GET', 'POST'])
@@ -50,9 +58,5 @@ def form():
             # If they don't match, it's the wrong password:
             else:
                 return render_template('sign.html', error="INVALID PASSWORD")
-
-    
-
-
 
 app.run()
