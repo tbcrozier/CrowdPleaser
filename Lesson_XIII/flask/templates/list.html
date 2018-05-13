@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href= "{{ url_for('static',filename='styles/style.css') }}">
+    
+   </head>
+   <body>
+
+      <div class="navbar">
+        <a href="enternew">Entry</a>
+        <a href="list">List</a>
+        <a href="signup">Signup</a>
+        <a href="logout">Logout</a>
+      </div>
+   
+      <table border = 1>
+         <thead>
+            <td>Name</td>
+            <td>Address</td>
+            <td>city</td>
+            <td>Pincode</td>
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row["name"]}}</td>
+               <td>{{row["addr"]}}</td>
+               <td> {{ row["city"]}}</td>
+               <td>{{row['pin']}}</td>	
+            </tr>
+         {% endfor %}
+      </table>
+      
+      <a href = "/home">Go back to home page</a>
+      
+   </body>
+</html>

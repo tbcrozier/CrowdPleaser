@@ -1,0 +1,44 @@
+{% block body %}
+{% if session['logged_in'] %}
+
+<link rel="stylesheet" href= "{{ url_for('static',filename='styles/style.css') }}">
+
+<p>You're logged in already!</p>
+<a href = "/home">Go back to home page</a>
+{% else %}
+<link rel="stylesheet" href= "{{ url_for('static',filename='styles/style.css') }}">
+
+      <div class="navbar">
+        <a href="enternew">Entry</a>
+        <a href="list">List</a>
+        <a href="signup">Signup</a>
+        <a href="logout">Logout</a>
+      </div>
+
+<form action="/login" method="POST">
+	<div class="login">
+		<div class="login-screen">
+			<div class="app-title">
+				<h1>Login</h1>
+			</div>
+ 
+			<div class="login-form">
+				<div class="control-group">
+				<input type="text" class="login-field" value="" placeholder="username" name="username">
+				<label class="login-field-icon fui-user" for="login-name"></label>
+				</div>
+ 
+				<div class="control-group">
+				<input type="password" class="login-field" value="" placeholder="password" name="password">
+				<label class="login-field-icon fui-lock" for="login-pass"></label>
+				</div>
+ 
+                <button type="submit" class="btn btn-primary btn-large btn-block">Log in</button>
+			    <br><br><br><br>
+			</div>
+		</div>
+	</div>
+</form>
+ 
+{% endif %}
+{% endblock %}

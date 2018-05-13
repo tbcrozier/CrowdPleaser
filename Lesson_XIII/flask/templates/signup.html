@@ -1,0 +1,35 @@
+<html>
+<head>
+    <link rel="stylesheet" href= "{{ url_for('static',filename='styles/style.css') }}">
+    
+   </head>
+   <body>
+
+      <div class="navbar">
+        <a href="enternew">Entry</a>
+        <a href="list">List</a>
+        <a href="Login">Login</a>
+        <a href="logout">Logout</a>
+      </div>
+      
+      <form action = "{{ url_for('signup') }}" method = "POST">
+         <h3>Sign Up Information</h3>
+         <br>
+         User Name
+         <br>
+         <input type = "text" name = "uname" /></br>
+         
+         Password
+         <br>
+         <br>
+         
+         <textarea name = "pword" ></textarea><br>
+
+         <br>
+         <br>
+         
+         <input type = "submit" value = "submit" /><br>
+      </form>
+      
+   </body>
+</html>
