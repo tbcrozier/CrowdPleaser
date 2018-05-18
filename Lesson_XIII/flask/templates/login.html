@@ -1,3 +1,4 @@
+{% extends "layout.html" %}
 {% block body %}
 {% if session['logged_in'] %}
 
@@ -7,13 +8,6 @@
 <a href = "/home">Go back to home page</a>
 {% else %}
 <link rel="stylesheet" href= "{{ url_for('static',filename='styles/style.css') }}">
-
-      <div class="navbar">
-        <a href="enternew">Entry</a>
-        <a href="list">List</a>
-        <a href="signup">Signup</a>
-        <a href="logout">Logout</a>
-      </div>
 
 <form action="/login" method="POST">
 	<div class="login">
@@ -34,7 +28,9 @@
 				</div>
  
                 <button type="submit" class="btn btn-primary btn-large btn-block">Log in</button>
-			    <br><br><br><br>
+                <br><br>
+                <a href="signup" class="btn btn-primary btn-large btn-block">Sign up</a>
+			    <br><br>
 			</div>
 		</div>
 	</div>
@@ -42,3 +38,4 @@
  
 {% endif %}
 {% endblock %}
+

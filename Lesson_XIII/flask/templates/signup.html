@@ -1,35 +1,44 @@
-<html>
-<head>
-    <link rel="stylesheet" href= "{{ url_for('static',filename='styles/style.css') }}">
-    
-   </head>
-   <body>
+{% extends "layout.html" %}
+{% block body %}
 
-      <div class="navbar">
-        <a href="enternew">Entry</a>
-        <a href="list">List</a>
-        <a href="Login">Login</a>
-        <a href="logout">Logout</a>
-      </div>
       
-      <form action = "{{ url_for('signup') }}" method = "POST">
-         <h3>Sign Up Information</h3>
+<form action = "{{ url_for('signup') }}" method = "POST">
+  <div class="login">
+    <div class="login-screen">
+      <div class="app-title">
+        <h3>Sign Up Information</h3>
+         </div>
+
          <br>
          User Name
          <br>
-         <input type = "text" name = "uname" /></br>
-         
+         <input type = "text" name = "uname" />
+        
+         <br>
+         <br>
+
          Password
          <br>
-         <br>
-         
-         <textarea name = "pword" ></textarea><br>
+         <input type = "text" name = "pword" />
 
          <br>
          <br>
          
+        <select name="role">
+            <option value="student">Student</option>
+            <option value="teacher">Teacher</option>
+          </select> 
+          
+         <br>
+         <br>
+        
          <input type = "submit" value = "submit" /><br>
-      </form>
+                
+    </div>
+  </div>
+</form>
+
       
-   </body>
-</html>
+
+
+{% endblock %}

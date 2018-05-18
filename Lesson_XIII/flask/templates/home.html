@@ -1,24 +1,8 @@
-<!DOCTYPE html>
-<html>
+{% extends "layout.html" %}
+{% block body %}
 
-   <head>
-    <link rel="stylesheet" href= "{{ url_for('static',filename='styles/style.css') }}">
-    
-   </head>
-   
-   <body>
-   		<h1>Home Page</h1>
-
-      <div class="navbar">
-        <a href="enternew">Entry</a>
-        <a href="list">List</a>
-        <a href="signup">Signup</a>
-        <a href="logout">Logout</a>
-      </div>
-
-      <img src="https://www.wcs.edu/rhs/wp-content/uploads/sites/81/2015/08/rhs-webheaderv3.png">
+   <h1>Welcome to the homepage</h1>
       
-   </body>
-   
-</html>
+      <a href = "/">Go back to login page</a>
 
+{% endblock %}

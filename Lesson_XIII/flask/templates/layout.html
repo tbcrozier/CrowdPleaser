@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+    <link rel="stylesheet" href= "{{ url_for('static',filename='styles/style.css') }}">
+    
+    <div class="navbar">
+        <a href="home">Home</a>
+        <a href="enternew">Entry</a>
+        <a href="list">List</a>
+        <a href="signup">Signup</a>
+        <a href="logout">Logout</a>
+      </div>
+
+   </head>
+   
+   <body>
+      <img src="https://www.wcs.edu/rhs/wp-content/uploads/sites/81/2015/08/rhs-webheaderv3.png" class="myimage">
+      
+      {% block body %}{% endblock %}
+
+   </body>
+</html>
+

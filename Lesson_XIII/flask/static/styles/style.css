@@ -126,3 +126,10 @@ th {
 .main {
     margin-top: 30px; /* Add a top margin to avoid content overlay */
 }
+
+/* Image style */
+.myimage {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
