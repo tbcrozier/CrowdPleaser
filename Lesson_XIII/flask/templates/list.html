@@ -1,17 +1,6 @@
-<!doctype html>
-<html>
-<head>
-    <link rel="stylesheet" href= "{{ url_for('static',filename='styles/style.css') }}">
-    
-   </head>
-   <body>
+{% extends "layout.html" %}
+{% block body %}
 
-      <div class="navbar">
-        <a href="enternew">Entry</a>
-        <a href="list">List</a>
-        <a href="signup">Signup</a>
-        <a href="logout">Logout</a>
-      </div>
    
       <table border = 1>
          <thead>
@@ -32,6 +21,5 @@
       </table>
       
       <a href = "/home">Go back to home page</a>
-      
-   </body>
-</html>
+
+{% endblock %}

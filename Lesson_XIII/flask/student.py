@@ -12,6 +12,4 @@ print "Students table created successfully";
 conn.execute('CREATE TABLE logins (uname TEXT, pword TEXT, salt TEXT, role TEXT)')
 print "Login table created successfully";
 
-
-
 conn.close()
